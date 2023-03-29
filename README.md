@@ -1,5 +1,5 @@
 # pySheetsReddit
-Automating Tableau output with Python and Google Sheets / Drive
+Automating Tableau output with Python, Google, and MySQL
 
 ## Table of Contents
 * [General Info](#general-info)
@@ -21,4 +21,5 @@ Finally, a function called **cleanSheetByTime()** cleans a given worksheet by ba
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
 - Schedule cron job to update automatically e.g. 59 23 * * 6 for every Saturday night
-- Could also switch to MySQL and get a much larger dataset (more subreddits, longer timeframe, more posts, etc.)
+- Add MySQL option instead of google
+- Write up how-to here in the readme once everything else is done so others can use the automation.  Allow for selecting subreddits, etc.
