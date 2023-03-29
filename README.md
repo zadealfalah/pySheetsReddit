@@ -21,3 +21,4 @@ Finally, a function called **cleanSheetByTime()** cleans a given worksheet by ba
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
 - Schedule cron job to update automatically
+- Could also switch to MySQL and get a much larger dataset (more subreddits, longer timeframe, more posts, etc.)
