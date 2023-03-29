@@ -20,5 +20,5 @@ Finally, a function called **cleanSheetByTime()** cleans a given worksheet by ba
 - Upload public tableau dashboard created from these worksheets
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
-- Schedule cron job to update automatically
+- Schedule cron job to update automatically e.g. 59 23 * * 6 for every Saturday night
 - Could also switch to MySQL and get a much larger dataset (more subreddits, longer timeframe, more posts, etc.)
