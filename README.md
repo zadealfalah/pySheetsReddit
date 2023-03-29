@@ -7,7 +7,7 @@ Automating Tableau output with Python, Google, and MySQL
 * [To Do](#to-do)
 
 ## General Info
-This project seeks to automatically generate and update a public Tableau dashboard with data pulled from Reddit.
+This project seeks to automatically generate and update a public Tableau dashboard with data pulled from Reddit.  It is currently set to look at the 'news', 'nottheonion', 'inthenews', and 'offbeat' subreddits (selected due to being suggested news subreddits).
 
 ## Current Features
 Currently, the data is taken from Reddit using PRAW and pushed into Google Sheets.  The data includes the time a post was created, the subreddit it was created on, as well as the title, self text, author, score, and ID of the post.  The subreddits that these are taken from can be set manually along with the total number of 'top' posts from each subreddit to take.  By default, it takes the top 100 posts within the last week from the 'test' subreddit.  This is all done in the **updatePosts()** function.
