@@ -1,0 +1,19 @@
+# Reddit login credentials
+client_id=yourclientid
+client_secret=yourclientsecret
+user=yourusername
+password=yourpassword
+user_agent=youruseragent
+
+# Google credentials
+secretpath=client_secret_..._.json
+sheetName=nameOfSheetToUse
+commentWksName=nameOfWksToStoreComments
+nerWksName=nameOfWksToStoreNER
+
+# Choosing your data
+subredditsToUse=subreddit1 subreddit2 subreddit3 ...
+timeframe='weeks'  # Used in dt.timedelta(timeframe = timeInt)
+timeInt=2  # Used in dt.timedelta(timeframe = timeInt)
+numberOfPosts=100 # Max number of posts you wish to look at per subreddit
+
