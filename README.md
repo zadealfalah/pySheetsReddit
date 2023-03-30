@@ -31,11 +31,12 @@ If you wish to have this be completely automatic, you should at this point sched
 ### Step 4: Bulding and Publishing Your Dashboard
 Your data is all in place now, so all that is left to do is to connect your Tableau to your Google Drive and format your dashboard to showcase whatever it is you care about in the data!
 Note that Tableau is stopping Google Sheets connectivity so it is requisite that your file be in your Google Drive starting in around April, 2023.  Once you have your dashboard formatted how you want it, you can set your data to automatically update from the Google Drive and you are all good to publish!
-### Step 5: Admire your work
+### Step 5: Admire Your Work
 You now have a fully automated (should you have completed step 3.5) Tableau dashboard showing whatever it is that you want to show about the subreddits in question.  No more work is required unless you want to change something in which case you need only follow these 5 steps again - and this time you won't even have to re-authenticate!
 
 
 ## To Do
+- Fix possible HttpError from getNER()
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
 - Color / format dashboard
