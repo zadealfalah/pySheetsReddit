@@ -97,12 +97,12 @@ def updatePosts(subList=subredditsToUse, timeFilter=timeframe, setLimit=numberOf
             else:
                 d = {}
                 d['timeCreated'] = dt.datetime.fromtimestamp(submission.created_utc)
-                d['subreddit'] = submission.subreddit.display_name
-                d['title'] = submission.title
-                d['score'] = submission.score
-                d['author'] = submission.author.name
-                d['selftext'] = submission.selftext
-                d['id'] = submission.id
+                d['subreddit'] = str(submission.subreddit.display_name)
+                d['title'] = str(submission.title)
+                d['score'] = int(submission.score)
+                d['author'] = str(submission.author.name)
+                d['selftext'] = str(submission.selftext)
+                d['id'] = str(submission.id)
                 # dfToUse = pd.concat([dfToUse,pd.DataFrame.from_dict(d, orient='index').T], ignore_index=True, axis=0)
                 
                 cells = wksToUse.get_all_values(include_tailing_empty_rows=False, include_tailing_empty=False, returnas='matrix')  
@@ -129,11 +129,11 @@ def getNER(sourceWks=wks, nerWks=nerWks):
             continue
         else:
             d = {}
-            d['postID'] = row['id']
+            d['postID'] = str(row['id'])
             nerText = NER(row['title'] + " " + row['selftext'])
             for word in nerText.ents:
-                d['nerWord'] = word.text
-                d['nerLabel'] = word.label_
+                d['nerWord'] = str(word.text)
+                d['nerLabel'] = str(word.label_)
                 cells = nerWks.get_all_values(include_tailing_empty_rows=False, include_tailing_empty=False, returnas='matrix')  
                 lastrow = len(cells)
                 dvals = list(d.values())
