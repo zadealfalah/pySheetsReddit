@@ -4,7 +4,7 @@ CREATE TABLE postInfo (
     score INT NOT NULL,
     title VARCHAR(100) NOT NULL,
     subreddit VARCHAR(20) NOT NULL,
-    timecreated VARCHAR(30) NOT NULL,
+    timecreated DATETIME NOT NULL,
     PRIMARY KEY (id)
 );
 
