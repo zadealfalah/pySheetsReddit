@@ -10,7 +10,7 @@ Automating Tableau output with Python, Google, and MySQL
 ## General Info
 This project seeks to automatically generate and update a public Tableau dashboard with data pulled from Reddit.  It is currently set to look at the 'news', 'nottheonion', 'inthenews', and 'offbeat' subreddits (selected due to being suggested news subreddits).  The code is set to update the data daily and to keep data from up to one week in the past.  This may change based on costs.  
 
-Linked [here](https://public.tableau.com/app/profile/zade.alfalah/viz/pySheetsReddit/Dashboard1?publish=yes) is the Tableau public dashboard.  It is currently a WIP.
+Linked [here](https://public.tableau.com/app/profile/zade.alfalah/viz/pySheetsReddit/Dashboard1?publish=yes) is an example Tableau dashboard which can be automatically updated via the pySheets.py file.
 
 ## Current Features
 Currently, the data is taken from Reddit using PRAW and pushed into Google Sheets.  The data includes the time a post was created, the subreddit it was created on, as well as the title, self text, author, score, and ID of the post.  The subreddits that these are taken from can be set manually along with the total number of 'top' posts from each subreddit to take.  By default, it takes the top 100 posts within the last week from the 'test' subreddit.  This is all done in the **updatePosts()** function.
@@ -36,10 +36,8 @@ You now have a fully automated (should you have completed step 3.5) Tableau dash
 
 
 ## To Do
-- Fix possible HttpError from getNER()
 - Decide on final amount of data to keep in each sheet at a time
-- Decide on final features to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
-- Color / format dashboard
-- Add MySQL option instead of google
-- Write up how-to here in the readme once everything else is done so others can use the automation.  Allow for selecting subreddits, etc.
-- Add cron scheduling option for auto updates e.g.  59 23 * * 6 for every Saturday night
+- Decide on final features/kpis to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
+- Color / format dashboard 
+- Add MySQL documentation
+- Add example bash file to allow scripting for those who don't know how
