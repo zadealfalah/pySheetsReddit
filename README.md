@@ -36,6 +36,7 @@ You now have a fully automated (should you have completed step 3.5) Tableau dash
 
 
 ## To Do
+- Finish changing pySheetsMySQL's getNER() function
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features/kpis to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
 - Color / format dashboard 
