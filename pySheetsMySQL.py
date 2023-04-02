@@ -6,6 +6,7 @@ import praw
 import datetime as dt
 import mysql.connector
 from mysql.connector import errorcode
+import spacy
 
 load_dotenv(override=True)
 client_id = os.getenv("client_id")
