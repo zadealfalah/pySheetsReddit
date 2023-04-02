@@ -5,15 +5,20 @@ user=yourusername
 password=yourpassword
 user_agent=youruseragent
 
-# Google credentials
+# option 2: Google credentials
 secretpath=client_secret_..._.json
 sheetName=nameOfSheetToUse
 commentWksName=nameOfWksToStoreComments
 nerWksName=nameOfWksToStoreNER
+
+# option 1: MySQL credentials
+mysqluser=user
+mysqlpassword=pass
+mysqlhost=000.000.000
+mysqldatabase=autotableudatabase
 
 # Choosing your data
 subredditsToUse=subreddit1 subreddit2 subreddit3 ...
 timeframe='weeks'  # Used in dt.timedelta(timeframe = timeInt)
 timeInt=2  # Used in dt.timedelta(timeframe = timeInt)
 numberOfPosts=100 # Max number of posts you wish to look at per subreddit
-
