@@ -6,6 +6,7 @@ Automating Tableau output with Python, Google, and MySQL
 * [Current Features](#curent-features)
 * [Automate Your Own](#automate-your-own)
 * [To Do](#to-do)
+* [Future Features?](#future-features?)
 
 ## General Info
 This project seeks to automatically generate and update a public Tableau dashboard with data pulled from Reddit.  It is currently set to look at the 'news', 'nottheonion', 'inthenews', and 'offbeat' subreddits (selected due to being suggested news subreddits).  The code is set to update the data daily and to keep data from up to one week in the past.  This may change based on costs.  
@@ -40,5 +41,18 @@ You now have a fully automated (should you have completed step 3.5) Tableau dash
 - Decide on final amount of data to keep in each sheet at a time
 - Decide on final features/kpis to display in tableau dashboard (e.g. top authors, top entities, top posts, etc.)
 - Color / format dashboard 
-- Add MySQL documentation
+- Add MySQL documentation to readme
 - Add example bash file to allow scripting for those who don't know how
+
+## Future Features?
+I am not sure if I will continue working on this project once the to-do list is done, but here are some possible features I could add to spruce this up should I be so inclined:
+
+1. Change updatePosts to have another attribute e.g. 'whatToPick' which will decide on which features from the reddit object to pick up for addition to the Google Sheet / MySQL database.  I would probably still use the .env file as a stand in for a config file to store all the columns that people may want similar to how it stores the subreddits to browse right now.
+
+2. Instead of getNER I could make it so that the function to apply and the column to apply it to were supplied in the .env file as well.  This is a lower priority than (1) as this basically just automates something that could be added easily, but might be a nice feature for people who don't know how to code.  If this was done, the transformations to be done and the columns on which they should be done would be supplied in the .env file.
+
+3. Change MySQL code to use executemany() to batch insert rows for speed.  Would be very useful for queries that are larger than what I am currently using in my example.
+
+For both (1) and (2) above, I'm unsure how to deal with the requisite tables in the sheets and mysql to be auto-created depending on the supplied inputs.  For now I can just assume that people would build their own column headers (for Google) or table (for MySQL) but maybe I could look into auto-generating the requisite .sql table creation code or automatically adding the Google sheets based on a conditional in the .env file.
+
+(3) seems like a reasonable step to take and I may add this to to-do rather than keeping it in future features soon.
